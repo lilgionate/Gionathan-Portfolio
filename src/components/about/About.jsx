@@ -17,7 +17,7 @@ const About = () => {
                     <Info/>
 
                     <p className="about__description">
-                    Hello, I'm Gionathan, an experienced Full Stack Developer with a track record of crafting dynamic digital solutions. My expertise spans both front-end and back-end technologies, where I specialize in designing intuitive interfaces and architecting scalable backend systems. I bring a keen eye for detail and a passion for creating seamless user experiences. Collaborating effectively within cross-functional teams, I bridge the gap between design and development, ensuring the delivery of high-quality, user-centric solutions. Stay updated on industry trends, I'm committed to excellence and innovation, driven to create impactful digital experiences.
+                    Hello, I’m Gionathan. I’m a Solutions Engineer who lives at the intersection of sales, technology, and customer success. My passion is helping businesses unlock the full power of modern software by transforming complex solutions into clear, actionable strategies. With a background that blends SaaS sales expertise, full stack development, and technical consulting, I bridge the gap between innovation and real world business needs. From engaging demos that inspire confidence to proof of concepts that deliver results, I make technology approachable, impactful, and aligned with client goals. What drives me? Curiosity, innovation, and growth. My mission is to empower organizations with the right tools and strategies to work smarter, move faster, and scale stronger than ever.
                     </p>
                 
                     <a download="" href={CV} className="button button--flex">Download CV

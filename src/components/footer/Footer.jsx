@@ -1,11 +1,13 @@
 import React from 'react';
 import "./footer.css";
 
+import Logo from "../../assets/nathans-dev.png"; 
+
 const Footer = () => {
   return (
     <footer className="footer">
         <div className="footer__container container">
-            <h1 className="footer__title">Gionathan</h1>
+             <img src={Logo} alt="nathans.dev" className="nav__footer-img" />
 
             <ul className="footer__list">
                 <li>
@@ -32,26 +34,26 @@ const Footer = () => {
                className="footer__social-link" 
                target='_blank'
             >
-              <i class="bx bxl-facebook"></i>
+              <i class="bx bxl-slack"></i>
            </a>
 
            <a href="https://www.instagram.com/lilgio.nate/" 
               className="footer__social-link" 
               target='_blank'
            >
-            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-linkedin"></i>
            </a>
 
            <a href="https://twitter.com/GioVargas20" 
               className="footer__social-link" 
               target='_blank'
             >
-            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-github"></i>
         </a>
             </div>
 
             <span className="footer__copy">
-                &#169; Gamil Engineering & Design. All rights reserved
+                &#169; Desinged By nathans.dev. All rights reserved
                 </span>
         </div>
     </footer>

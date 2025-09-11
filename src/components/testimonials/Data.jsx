@@ -1,25 +1,20 @@
-import Image1 from "../../assets/testimonial1.jpeg";
-import Image2 from "../../assets/testimonial2.jpeg";
-import Image3 from "../../assets/testimonial3.jpeg";
-
 export const Data = [
-    {
-        id: 1,
-        images: Image1,
-        title: "John Doe",
-        description: " A really good job, all aspects of the project were followed step by step and with good results."
-    },
-    {
-        id: 2,
-        images: Image2,
-        title: "Chris Doe",
-        description: " A really good job, all aspects of the project were followed step by step and with good results."
-    },
-    {
-        id: 3,
-        images: Image3,
-        title: "Kelvin Doe",
-        description: " A really good job, all aspects of the project were followed step by step and with good results."
-    },
+  {
+    id: 1,
+    icon: "bx bx-chalkboard", // demo-related icon
+    title: "200+ Demos Delivered",
+    description: "Led engaging software demos that simplified complex features and built client confidence."
+  },
+  {
+    id: 2,
+    icon: "bx bx-code-alt", // coding/dev icon
+    title: "SettlePilot SaaS Project",
+    description: "Developed a React + Firebase platform with authentication, onboarding, and dashboards."
+  },
+  {
+    id: 3,
+    icon: "bx bx-line-chart", // analytics/growth icon
+    title: "Sales & Technical Impact",
+    description: "Blended SaaS sales expertise with hands-on software development to bridge business and technology."
+  },
 ];
-

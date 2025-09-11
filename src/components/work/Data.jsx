@@ -50,15 +50,15 @@ export const projectsData = [
 
 export const projectsNav = [
     {
-        name: 'all',
+        name: 'All',
     },
     {
-        name: 'web',
+        name: 'Demos',
     },
     {
-        name: 'app',
+        name: 'Integrations',
     },
     {
-        name: 'design',
+        name: 'Dashboards',
     },
 ];

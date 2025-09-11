@@ -55,8 +55,8 @@ const Data = () => {
                   ></path>
             </svg>
             </h1>
-            <h3 className="home__subtitle">Full Stack Developer</h3>
-            <p className="home__description"> I'm a web architect based in NYC, passionate about crafting visually appealing and functionally robust websites. Beyond coding, I explore the city's diverse neighborhoods, indulge in culinary adventures, and capture life's moments through photography. Let's build something extraordinary together!</p>
+            <h3 className="home__subtitle">Solutions Engineer</h3>
+            <p className="home__description">Hello & welcome to nathans.dev! I transform complex software into crystal clear solutions, delivering demos that don’t just explain, they inspire. With a unique blend of SaaS sales expertise and hands on web development skills, I bring both technical depth and business insight to every conversation. Let’s turn challenges into solutions and solutions into success.</p>
 
             <a href="#contact" className="button button--flex">
                 Say Hello

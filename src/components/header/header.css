@@ -1,130 +1,167 @@
+/* ========== Base ========== */
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-    background-color: var(--body-color);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+  transition: all 0.3s ease-in-out; /* smooth background/box-shadow changes */
 }
 
 .nav {
-    height: calc(var(--header-height) + 1.5rem);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 1rem;
+  height: calc(var(--header-height) + 1.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  transition: height 0.3s ease-in-out; /* smooth height changes */
 }
 
-.nav__logo,
+/* Theme color for SVG/wordmark */
+.nav__logo {
+  color: var(--title-color);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* ---- Logo sizing ---- */
+:root {
+  --logo-h: 100px;          /* normal height */
+  --logo-h-scrolled: 80px;  /* height after scroll */
+}
+
+.nav__logo-img {
+  height: var(--logo-h);
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: height 0.3s ease-in-out; /* smooth resize */
+}
+
+/* Shrink logo only when scrolled (desktop) */
+.scroll-header .nav__logo-img {
+  height: var(--logo-h-scrolled);
+}
+
 .nav__toggle {
-    color: var(--title-color);
-    font-weight: var(--font-medium);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 0.3s ease-in-out;
 }
 
 .nav__list {
-    display: flex;
-    column-gap: 2rem;
+  display: flex;
+  column-gap: 2rem;
 }
 
 .nav__link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: var(--small-font-size);
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-    transition: .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 0.3s ease-in-out;
 }
 
 .nav__icon,
 .nav__close,
 .nav__toggle {
-    display: none;
+  display: none;
 }
 
 /* Active link */
 .active-link,
 .nav__link:hover {
-    color: var(--title-color-dark);
+  color: var(--title-color-dark);
 }
 
-/* Change background header */
+/* Header dropshadow on scroll */
 .scroll-header {
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-/* BREAKPOINTS */
-/* For medium devices */
+/* ========== Medium & down (<= 768px) ========== */
 @media screen and (max-width: 768px) {
-    .header {
-        top: initial;
-        bottom: 0;
-    }
+  .header {
+    top: initial;
+    bottom: 0;
+  }
 
-    .nav {
-        height: var(--header-height);
-    }
+  .nav {
+    height: var(--header-height);
+  }
 
-    .nav__menu {
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 1.5rem 1.5rem 0 0;
-        transition: .3s;
-    }
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: bottom 0.4s ease-in-out; /* smooth slide */
+  }
 
-    /* Show Menu */
-    .show-menu {
-        bottom: 0;
-    }
+  /* Show Menu */
+  .show-menu {
+    bottom: 0;
+  }
 
-    .nav__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
+  .nav__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 
-    .nav__icon {
-        font-size: 1.2rem;
-    }
+  .nav__icon {
+    font-size: 1.2rem;
+  }
 
-    .nav__close {
-        position: absolute;
-        right: 1.3rem;
-        bottom: .5rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--title-color);
-    }
+  .nav__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--title-color);
+    transition: color 0.3s ease-in-out;
+  }
 
-    .nav__close:hover {
-        color: var(--title-color-dark);
-    }
+  .nav__close:hover {
+    color: var(--title-color-dark);
+  }
 
-    .nav__toggle {
-        font-size: 1.1rem;
-        cursor: pointer;
-    }
+  .nav__toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
 
-    .nav__icon,
-    .nav__close,
-    .nav__toggle {
-        display: block;
-    }
+  .nav__icon,
+  .nav__close,
+  .nav__toggle {
+    display: block;
+  }
+
+  /* --- Keep logo size constant on mobile --- */
+  :root {
+    --logo-h: 80px;          /* fixed logo height on mobile */
+    --logo-h-scrolled: 80px; /* same as normal => no size change */
+  }
 }
 
-/* For small devices */
-@media  screen and (max-width: 350px) {
-    .nav__menu {
-        padding: 2rem 0.25rem 4rem;
-    }
+/* ========== Small (<= 350px) ========== */
+@media screen and (max-width: 350px) {
+  .nav__menu {
+    padding: 2rem 0.25rem 4rem;
+  }
 
-    .nav__list {
-        column-gap: 0;
-    }
+  .nav__list {
+    column-gap: 0;
+  }
 }
