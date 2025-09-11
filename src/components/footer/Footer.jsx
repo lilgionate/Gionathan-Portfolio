@@ -7,7 +7,9 @@ const Footer = () => {
   return (
     <footer className="footer">
         <div className="footer__container container">
-             <img src={Logo} alt="nathans.dev" className="nav__footer-img" />
+            <a href="#home">
+                <img src={Logo} alt="nathans.dev" className="nav__footer-img" />
+            </a>
 
             <ul className="footer__list">
                 <li>
@@ -23,28 +25,28 @@ const Footer = () => {
                 </li>
 
                 <li>
-                    <a href="#testimonials" className="footer__link">
-                        Testimonials
+                    <a href="#services" className="footer__link">
+                        Services
                     </a>
                 </li>
             </ul>
 
             <div className="footer__social">
-            <a href="https://www.facebook.com/gioanathan.vargas.3/" 
+            <a href="https://newworkspace-qrf1337.slack.com/team/U05S6SLD42H" 
                className="footer__social-link" 
                target='_blank'
             >
               <i class="bx bxl-slack"></i>
            </a>
 
-           <a href="https://www.instagram.com/lilgio.nate/" 
+           <a href="https://www.linkedin.com/in/gionathan-vargas-302306195/" 
               className="footer__social-link" 
               target='_blank'
            >
             <i class="bx bxl-linkedin"></i>
            </a>
 
-           <a href="https://twitter.com/GioVargas20" 
+           <a href="https://github.com/lilgionate" 
               className="footer__social-link" 
               target='_blank'
             >

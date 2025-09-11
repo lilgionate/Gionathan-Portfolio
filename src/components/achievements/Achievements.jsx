@@ -1,5 +1,5 @@
 import React from 'react';
-import "./testimonial.css";
+import "./achievements.css";
 import { Data } from "./Data";
 // Import Swiper React components and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,12 +9,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
-const Testimonials = () => {
+const Achievements = () => {
   return (
     <section className="testimonial container section">
-      <h2 className="section__title">Key Achievements</h2>
+      <h2 className="section__title">Achievements</h2>
       <span className="section__subtitle">Highlights from my journey</span>
 
       <Swiper
@@ -22,6 +22,11 @@ const Testimonials = () => {
         loop={true}
         grabCursor={true}
         spaceBetween={24}
+        speed={800}
+        autoplay={{
+          delay: 4000, // 3 seconds
+          disableOnInteraction: false, // keeps autoplay running after user interaction
+        }}
         pagination={{
           clickable: true,
         }}
@@ -34,7 +39,7 @@ const Testimonials = () => {
             spaceBetween: 48,
           },
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
       >
         {Data.map(({ id, icon, title, description }) => {
           return (
@@ -50,4 +55,4 @@ const Testimonials = () => {
   );
 }
 
-export default Testimonials;
+export default Achievements;

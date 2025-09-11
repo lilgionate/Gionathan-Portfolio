@@ -3,7 +3,7 @@ import React from 'react';
 const Social = () => {
   return (
     <div className="home__social">
-        <a href="https://app.slack.com/client/T05S35ELFN2/C05SYQ42VLG" className="home__social-icon" target='_blank'>
+        <a href="https://newworkspace-qrf1337.slack.com/team/U05S6SLD42H" className="home__social-icon" target='_blank'>
             <i class="uil uil-slack-alt"></i>
         </a>
 

@@ -165,7 +165,9 @@ section {
 .button--flex {
   display: inline-flex;
   align-items: center;
+  transition: background-color 0.4s, color 0.4s;
 }
+
 
 /* BREAKPOINTS */
 /* For large devices */

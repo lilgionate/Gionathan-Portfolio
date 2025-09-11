@@ -43,7 +43,7 @@ const Contact = () => {
               <i className="bx bx-map contact__card-icon" aria-hidden="true"></i>
               <h3 className="contact__card-title">Location</h3>
               <span className="contact__card-data">New York, USA</span>
-              <span className="contact__button contact__button--muted">
+              <span className="contact__location contact__button--muted">
                 Available for remote roles
               </span>
             </div>
