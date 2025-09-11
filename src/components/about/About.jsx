@@ -1,6 +1,6 @@
 import "./about.css";
 import AboutImg from "../../assets/About.jpeg";
-import CV from "../../assets/ResumeEX.pdf";
+import CV from "../../assets/Gionathan-Vargas-CV.pdf";
 import Info from "./Info";
 
 const About = () => {
