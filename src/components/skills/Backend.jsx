@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Backend = () => {
   return (
     <div className="skills__content">
@@ -8,7 +6,7 @@ const Backend = () => {
     <div className="skills__box">
         <div className="skills__group">
             <div className="skills__data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
 
                 <div>
                     <h3 className="skills__name">Demoing</h3>
@@ -17,7 +15,7 @@ const Backend = () => {
             </div>
 
             <div className="skills__data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
 
                 <div>
                     <h3 className="skills__name">POCs</h3>
@@ -26,7 +24,7 @@ const Backend = () => {
             </div>
 
             <div className="skills__data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
 
                 <div>
                     <h3 className="skills__name">Architecture</h3>
@@ -37,7 +35,7 @@ const Backend = () => {
 
         <div className="skills__group">
             <div className="skills__data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
 
                 <div>
                     <h3 className="skills__name">Integrations</h3>
@@ -46,7 +44,7 @@ const Backend = () => {
             </div>
 
             <div className="skills__data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
 
                 <div>
                     <h3 className="skills__name">Discovery</h3>
@@ -55,7 +53,7 @@ const Backend = () => {
             </div>
 
             <div className="skills__data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
 
                 <div>
                     <h3 className="skills__name">Storytelling</h3>

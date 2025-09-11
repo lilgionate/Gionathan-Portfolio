@@ -1,4 +1,3 @@
-import React from 'react';
 import "./achievements.css";
 import { Data } from "./Data";
 // Import Swiper React components and required modules
