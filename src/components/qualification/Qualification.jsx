@@ -91,7 +91,7 @@ const Qualification = () => {
                             Columbia University
                             </span>
                            <div className="qualification__calender">
-                            <i className="uil uil-calender-alt"></i>2021 – 2022
+                            <i className="uil uil-calender-alt"></i>2023 – 2024
                            </div>
                        </div> 
 
@@ -115,7 +115,7 @@ const Qualification = () => {
                             University of Toronto
                             </span>
                            <div className="qualification__calender">
-                            <i className="uil uil-calender-alt"></i>2015 – 2019
+                            <i className="uil uil-calender-alt"></i>2016 – 2020
                            </div>
                        </div> 
                     </div>
@@ -155,7 +155,7 @@ const Qualification = () => {
                        <div>
                            <h3 className="qualification__title">Software Developer</h3>
                            <span className="qualification__subtitle">
-                            YoursTruly - New York
+                            Nathans.dev - New York
                             </span>
                            <div className="qualification__calender">
                             <i className="uil uil-calender-alt"></i>2023 - Present
@@ -170,7 +170,7 @@ const Qualification = () => {
                             DCG - New York
                             </span>
                            <div className="qualification__calender">
-                            <i className="uil uil-calender-alt"></i>2019 - 2021
+                            <i className="uil uil-calender-alt"></i>2022 - 2024
                            </div>
                        </div> 
 
