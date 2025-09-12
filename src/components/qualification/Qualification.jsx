@@ -50,7 +50,7 @@ const Qualification = () => {
                     >
                     <div className="qualification__data">
                        <div>
-                           <h3 className="qualification__title">Certified Cloud Practitioner</h3>
+                           <h3 className="qualification__title">Cloud Practitioner</h3>
                            <span className="qualification__subtitle">
                             Amazon Web Services
                             </span>
