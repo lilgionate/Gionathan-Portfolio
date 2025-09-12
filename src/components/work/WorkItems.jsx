@@ -32,8 +32,8 @@ WorksItems.propTypes = {
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    demoUrl: PropTypes.string.isRequired,
-    githubUrl: PropTypes.string.isRequired,
+    demoUrl: PropTypes.string,
+    githubUrl: PropTypes.string,
   }).isRequired,
 };
 
