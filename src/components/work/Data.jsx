@@ -12,7 +12,7 @@ export const projectsData = [
         title: "Stripe Billing & Subscription Portal",
         category: "Demos",
         demoUrl: "https://young-lake-53776-5ca5885c8205.herokuapp.com/",
-        githubUrl: "https://github.com/wchoi888/virtual_bookshelf.git",
+        githubUrl: "https://github.com/lilgionate/nextjs.git",
     },
     {
         id: 2,
