@@ -131,7 +131,7 @@ const DemoModal = ({ isOpen, project, onClose }) => {
                 rel="noreferrer"
                 className="work__button demo-button"
               >
-                Open live demo ↗
+                Open live app ↗
               </a>
             )}
             {project.githubUrl && (
