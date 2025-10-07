@@ -13,6 +13,8 @@ export const projectsData = [
         category: "Demos",
         demoUrl: "https://young-lake-53776-5ca5885c8205.herokuapp.com/",
         githubUrl: "https://github.com/lilgionate/stripe-subscription.git",
+        description: "Stripe Checkout + Portal with webhooks → MongoDB via Prisma.",
+        videoUrl: "https://www.loom.com/embed/f0ae978fbbf543049b1b40516a3da299?sid=3db3b89a-44d0-4be1-a978-6d90ce0b8d39",
     },
     {
         id: 2,
