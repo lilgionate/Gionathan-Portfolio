@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { projectsData } from "./Data";
-import { projectsNav } from "./Data";
+import { useEffect, useRef, useState } from "react";
+import { projectsData, projectsNav } from "./Data";
 import WorkItems from "./WorkItems";
 
 const Works = () => {
@@ -8,7 +7,6 @@ const Works = () => {
   const [projects, setProjects] = useState([]);
   const [active, setActive] = useState(0);
 
-  // NEW: modal state
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(null);
 
@@ -16,10 +14,9 @@ const Works = () => {
     if (item.name === "all") {
       setProjects(projectsData);
     } else {
-      const newProjects = projectsData.filter((project) => {
-        return project.category.toLowerCase() === item.name;
-      });
-      setProjects(newProjects);
+      setProjects(
+        projectsData.filter((p) => p.category.toLowerCase() === item.name)
+      );
     }
   }, [item]);
 
@@ -28,16 +25,17 @@ const Works = () => {
     setActive(index);
   };
 
-  // NEW: open/close handlers
   const openDemo = (proj) => {
     setSelected(proj);
     setIsOpen(true);
-    // optional: lock body scroll
     document.body.style.overflow = "hidden";
   };
 
-  const closeDemo = () => {
-    setIsOpen(false);
+  // Close: only flip isOpen; let modal animate out
+  const closeDemo = () => setIsOpen(false);
+
+  // Called by modal after exit transition completes
+  const handleExited = () => {
     setSelected(null);
     document.body.style.overflow = "";
   };
@@ -45,19 +43,15 @@ const Works = () => {
   return (
     <div>
       <div className="work__filters">
-        {projectsNav.map((item, index) => {
-          return (
-            <span
-              onClick={(e) => {
-                handleClick(e, index);
-              }}
-              className={`${active === index ? "active-work" : ""} work__item`}
-              key={index}
-            >
-              {item.name}
-            </span>
-          );
-        })}
+        {projectsNav.map((navItem, index) => (
+          <span
+            key={index}
+            onClick={(e) => handleClick(e, index)}
+            className={`${active === index ? "active-work" : ""} work__item`}
+          >
+            {navItem.name}
+          </span>
+        ))}
       </div>
 
       <div className="work__container container grid">
@@ -66,33 +60,84 @@ const Works = () => {
         ))}
       </div>
 
-      {/* NEW: Modal */}
-      <DemoModal isOpen={isOpen} project={selected} onClose={closeDemo} />
+      <DemoModal
+        isOpen={isOpen}
+        project={selected}
+        onClose={closeDemo}
+        onExited={handleExited}
+      />
     </div>
   );
 };
 
 export default Works;
 
-// --- Inline modal component (keeps files the same) ---
-const DemoModal = ({ isOpen, project, onClose }) => {
-  if (!isOpen || !project) return null;
+/* --- Inline modal component --- */
+const DemoModal = ({ isOpen, project, onClose, onExited }) => {
+  const [mounted, setMounted] = useState(false); // presence in DOM
+  const [show, setShow] = useState(false);       // controls .show class (animation)
+  const overlayRef = useRef(null);
+  const modalRef = useRef(null);
 
-  // Prefer videoUrl for embedding; fallback to demoUrl (may be blocked by X-Frame-Options)
+  // Mount/unmount logic
+  useEffect(() => {
+    if (isOpen && project) {
+      setMounted(true); // mount immediately
+    } else {
+      setShow(false);   // start exit transition
+    }
+  }, [isOpen, project]);
+
+  // Ensure a real first paint before adding .show (double rAF)
+  useEffect(() => {
+    if (!mounted || !isOpen) return;
+    let raf1, raf2;
+    raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => setShow(true));
+    });
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+    };
+  }, [mounted, isOpen]);
+
+  // After the modal finishes transitioning out, unmount + notify parent
+  const handleModalTransitionEnd = (e) => {
+    if (e.target !== modalRef.current) return;
+    if (!show) {
+      setMounted(false);
+      onExited?.();
+    }
+  };
+
+  // ESC to close
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  if (!mounted || !project) return null;
+
   const src = project.videoUrl || project.demoUrl || "";
 
   return (
     <div
-      className="modal-overlay"
+      ref={overlayRef}
+      className={`modal-overlay ${show ? "show" : ""}`}
       role="dialog"
       aria-modal="true"
       aria-labelledby="demo-modal-title"
       onMouseDown={(e) => {
-        // close when clicking the dim background
-        if (e.target.classList.contains("modal-overlay")) onClose();
+        if (e.target === overlayRef.current) onClose();
       }}
     >
-      <div className="modal">
+      <div
+        ref={modalRef}
+        className="modal"
+        onMouseDown={(e) => e.stopPropagation()}
+        onTransitionEnd={handleModalTransitionEnd}
+      >
         <div className="modal__header">
           <div>
             <h3 id="demo-modal-title" className="modal__title">
@@ -118,9 +163,7 @@ const DemoModal = ({ isOpen, project, onClose }) => {
               />
             </div>
           ) : (
-            <div className="modal__empty">
-              No video or embeddable demo provided.
-            </div>
+            <div className="modal__empty">No video or embeddable demo provided.</div>
           )}
 
           <div className="modal__actions">

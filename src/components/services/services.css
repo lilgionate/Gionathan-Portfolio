@@ -33,10 +33,10 @@
     align-items: center;
     column-gap: 0.25rem;
     cursor: pointer;
-    padding: 0.25rem 0.75rem; /* Adjust padding as needed */
+    padding: 0.25rem 0.75rem;
     background-color: var(--title-color);
     color: white;
-    border-radius: 0.5rem; /* Same border radius as the demo button */
+    border-radius: 0.5rem;
 }
 
 .services__button-icon {
@@ -55,6 +55,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
     z-index: var(--z-modal);
     display: flex;
     justify-content: center;

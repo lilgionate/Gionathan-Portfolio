@@ -84,7 +84,7 @@ const Contact = () => {
               <span className="contact__card-data">New York, USA</span>
               <span className="contact__location contact__button--muted">
                 <span className={`status-dot ${isAvailable ? 'available' : 'unavailable'}`}></span>
-                {isAvailable ? 'Available (9 AM – 9 PM)' : 'Unavailable'}
+                {isAvailable ? 'Available' : 'Unavailable'}
               </span>
             </div>
 
