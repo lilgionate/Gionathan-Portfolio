@@ -124,16 +124,6 @@ const DemoModal = ({ isOpen, project, onClose }) => {
           )}
 
           <div className="modal__actions">
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="work__button demo-button"
-              >
-                Open Live App
-              </a>
-            )}
             {project.githubUrl && (
               <a
                 href={project.githubUrl}

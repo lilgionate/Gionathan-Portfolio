@@ -9,7 +9,7 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">JavaScript</h3>
+                        <h3 className="skills__name">Frontend</h3>
                         <span className="skills__level">Advanced</span>
                     </div>
                 </div>
@@ -18,7 +18,7 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">React</h3>
+                        <h3 className="skills__name">Backend</h3>
                         <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">Node.js</h3>
+                        <h3 className="skills__name">Databases</h3>
                         <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">GraphQL</h3>
+                        <h3 className="skills__name">APIs</h3>
                         <span className="skills__level">Advanced</span>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">SQL/NoSQL</h3>
+                        <h3 className="skills__name">Cloud</h3>
                         <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">Cloud</h3>
+                        <h3 className="skills__name">UI/UX</h3>
                         <span className="skills__level">Intermediate</span>
                     </div>
                 </div>

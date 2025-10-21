@@ -11,7 +11,6 @@ export const projectsData = [
         image: Work1,
         title: "Stripe Billing & Subscription Portal",
         category: "Demos",
-        demoUrl: "https://stripe-subscription-gray.vercel.app/",
         githubUrl: "https://github.com/lilgionate/stripe-subscription.git",
         description: "Stripe Checkout + Portal with webhooks → MongoDB via Prisma.",
         videoUrl: "https://www.loom.com/embed/f0ae978fbbf543049b1b40516a3da299?sid=3db3b89a-44d0-4be1-a978-6d90ce0b8d39",
@@ -21,8 +20,9 @@ export const projectsData = [
         image: Work2,
         title: "Trello Style Kanban Board",
         category: "Integrations",
-        demoUrl: "https://deplo-b4f2f1dae76e.herokuapp.com/",
         githubUrl: "https://github.com/lilgionate/MVC-Tech-Blog.git",
+        description: "Stripe Checkout + Portal with webhooks → MongoDB via Prisma.",
+        
     },
     {
         id: 3,

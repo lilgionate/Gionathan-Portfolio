@@ -8,7 +8,7 @@ export const Data = [
   {
     id: 2,
     icon: "bx bx-group", 
-    title: "Cross-Team Collaboration",
+    title: "Cross Team Collaboration",
     description: "Partnered with product and engineering teams to align customer needs with technical solutions."
   },
   {
