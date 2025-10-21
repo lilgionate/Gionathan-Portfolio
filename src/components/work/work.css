@@ -62,12 +62,12 @@
   justify-content: center;
   column-gap: 0.4rem;
   padding: 0.35rem 0.9rem;
-  border-radius: 0.5rem; /* pill shape */
+  border-radius: 0.5rem; 
   background-color: var(--title-color);
   color: #fff;
   font-size: var(--small-font-size);
   text-decoration: none;
-  width: fit-content; /* keeps button tight around content */
+  width: fit-content; 
   transition: transform 0.4s ease;
 }
 
@@ -175,11 +175,11 @@
 
 .work__img-wrapper {
   position: relative;
-  width: 295px; /* same as image */
+  display: inline-block;
+  width: 100%;
   height: auto;
   border-radius: 1rem;
-  overflow: hidden; /* important: keeps overlay inside */
-  cursor: pointer;
+  overflow: hidden;
 }
 
 .work__img {
@@ -187,46 +187,34 @@
   width: 100%;
   height: auto;
   border-radius: inherit;
-  margin: 0; /* prevent margin collapse */
+  margin: 0; 
 }
 
-/* Dark overlay */
 .work__img-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.312);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.265);
   border-radius: inherit;
-  pointer-events: none; /* let clicks go through */
+  cursor: pointer;
 }
 
-/* Play icon */
 .work__play-button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
-  opacity: 0;
   color: var(--title-color);
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none; /* make sure hover doesn't flicker */
-}
-
-/* Hover effect */
-.work__img-wrapper:hover::before,
-.work__img-wrapper:hover .work__play-button {
-  opacity: 1;
+  cursor: pointer;
 }
 
 .work__img-wrapper:hover .work__play-button {
   transform: translate(-50%, -50%) scale(1.1);
 }
-
 
 
 /* BREAKPOINTS */
@@ -250,11 +238,19 @@
   }
   
   /* For medium devices */
-  @media screen and (max-width: 768px) {
-    .work__container {
-        grid-template-columns: max-content;
-    }
+ @media screen and (max-width: 768px) {
+  .work__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; 
   }
+
+  .work__card {
+    width: 90%;           
+    max-width: 336.5px;      
+  }
+}
+
   
   @media screen and (max-width: 576px) {
     .work__container {
@@ -262,7 +258,7 @@
     }
 
     .work__img {
-        width: 100%;
+      margin: 0;
     }
   }
   

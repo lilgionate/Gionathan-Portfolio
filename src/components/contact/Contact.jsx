@@ -1,13 +1,26 @@
 // src/components/contact/Contact.jsx
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './contact.css';
 import Message from './Message';
-import logo from '../../assets/nathans-dev.png'; // <-- relative import from src/components/contact
+import logo from '../../assets/nathans-dev.png'; 
 
 const Contact = () => {
   const form = useRef(null);
   const [sending, setSending] = useState(false);
   const [toast, setToast] = useState({ open: false, variant: 'success', text: '' });
+  const [isAvailable, setIsAvailable] = useState(false);
+
+  useEffect(() => {
+    const checkAvailability = () => {
+      const now = new Date();
+      const hour = now.getHours();
+      setIsAvailable(hour >= 9 && hour < 21); // Available between 9 AM and 9 PM
+    };
+
+    checkAvailability();
+    const interval = setInterval(checkAvailability, 60000); // update every minute
+    return () => clearInterval(interval);
+  }, []);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -23,11 +36,19 @@ const Contact = () => {
       const payload = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(payload?.error || 'Failed to send.');
 
-      setToast({ open: true, variant: 'success', text: 'Your message was sent successfully. I’ll be in touch soon!' });
+      setToast({
+        open: true,
+        variant: 'success',
+        text: 'Your message was sent successfully. I’ll be in touch soon!',
+      });
       form.current.reset();
     } catch (err) {
       console.error('Contact form error:', err);
-      setToast({ open: true, variant: 'error', text: 'Failed to send. Please try again or email me directly at gioanathanv@gmail.com.' });
+      setToast({
+        open: true,
+        variant: 'error',
+        text: 'Failed to send. Please try again or email me directly at gioanathanv@gmail.com.',
+      });
     } finally {
       setSending(false);
     }
@@ -48,7 +69,11 @@ const Contact = () => {
               <i className="bx bx-envelope contact__card-icon" aria-hidden="true"></i>
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">gioanathanv@gmail.com</span>
-              <a href="mailto:gioanathanv@gmail.com" className="contact__button" aria-label="Email Gionathan">
+              <a
+                href="mailto:gioanathanv@gmail.com"
+                className="contact__button"
+                aria-label="Email Gionathan"
+              >
                 Write me <i className="bx bx-right-arrow-alt contact__button-icon" aria-hidden="true"></i>
               </a>
             </div>
@@ -57,14 +82,21 @@ const Contact = () => {
               <i className="bx bx-map contact__card-icon" aria-hidden="true"></i>
               <h3 className="contact__card-title">Location</h3>
               <span className="contact__card-data">New York, USA</span>
-              <span className="contact__location contact__button--muted">Available for remote roles</span>
+              <span className="contact__location contact__button--muted">
+                <span className={`status-dot ${isAvailable ? 'available' : 'unavailable'}`}></span>
+                {isAvailable ? 'Available (9 AM – 9 PM)' : 'Unavailable'}
+              </span>
             </div>
 
             <div className="contact__card">
               <i className="bx bx-phone contact__card-icon" aria-hidden="true"></i>
               <h3 className="contact__card-title">Phone</h3>
               <span className="contact__card-data">+1 929-216-8007</span>
-              <a href="tel:+19292168007" className="contact__button" aria-label="Call Gionathan">
+              <a
+                href="tel:+19292168007"
+                className="contact__button"
+                aria-label="Call Gionathan"
+              >
                 Call me <i className="bx bx-right-arrow-alt contact__button-icon" aria-hidden="true"></i>
               </a>
             </div>
@@ -78,27 +110,56 @@ const Contact = () => {
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
-              <input type="text" name="user_name" className="contact__form-input" placeholder="Insert your name" required />
+              <input
+                type="text"
+                name="user_name"
+                className="contact__form-input"
+                placeholder="Insert your name"
+                required
+              />
             </div>
 
             <div className="contact__form-div">
               <label className="contact__form-tag">Email</label>
-              <input type="email" name="user_email" className="contact__form-input" placeholder="Insert your email" required />
+              <input
+                type="email"
+                name="user_email"
+                className="contact__form-input"
+                placeholder="Insert your email"
+                required
+              />
             </div>
 
             <div className="contact__form-div">
               <label className="contact__form-tag">Phone</label>
-              <input type="tel" name="user_phone" className="contact__form-input" placeholder="Insert your phone number" />
+              <input
+                type="tel"
+                name="user_phone"
+                className="contact__form-input"
+                placeholder="Insert your phone number"
+              />
             </div>
 
             <div className="contact__form-div">
               <label className="contact__form-tag">Subject</label>
-              <input type="text" name="user_option" className="contact__form-input" placeholder="What is this for?" />
+              <input
+                type="text"
+                name="user_option"
+                className="contact__form-input"
+                placeholder="What is this for?"
+              />
             </div>
 
             <div className="contact__form-div contact__form-area">
               <label className="contact__form-tag">Message</label>
-              <textarea name="message" cols="30" rows="10" className="contact__form-input" placeholder="Write your project" required />
+              <textarea
+                name="message"
+                cols="30"
+                rows="10"
+                className="contact__form-input"
+                placeholder="Write your project"
+                required
+              />
             </div>
 
             <button className="button button--flex" type="submit" disabled={sending}>
@@ -114,7 +175,7 @@ const Contact = () => {
         title={toast.variant === 'success' ? 'Message sent' : 'Something went wrong'}
         message={toast.text}
         variant={toast.variant}
-        logoSrc={logo}  
+        logoSrc={logo}
         autoHideMs={toast.variant === 'success' ? 3500 : 6000}
       />
     </section>

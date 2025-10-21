@@ -61,11 +61,14 @@
 }
 
 .contact__location {
-    color: var(--text-color);
     font-size: var(--small-font-size);
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--title-color);
+    color: white;
 }
 
 .contact__button-icon {
@@ -119,6 +122,47 @@
 .contact__form-area textarea {
     resize: none;
 }
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.status-dot.available {
+  background-color: #00ff66;
+  box-shadow: 0 0 4px #00ff66, 0 0 8px #00ff66;
+  animation: pulseGreen 2s infinite;
+}
+
+.status-dot.unavailable {
+  background-color: #ff3b3b;
+  box-shadow: 0 0 4px #ff3b3b, 0 0 8px #ff3b3b;
+  animation: pulseRed 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0%, 100% {
+    box-shadow: 0 0 6px #00ff66, 0 0 10px #00ff66;
+  }
+  50% {
+    box-shadow: 0 0 11px #00ff66, 0 0 21px #00ff66;
+  }
+}
+
+@keyframes pulseRed {
+  0%, 100% {
+    box-shadow: 0 0 4px #ff3b3b, 0 0 8px #ff3b3b;
+  }
+  50% {
+    box-shadow: 0 0 11px #ff3b3b, 0 0 21px #ff3b3b;
+  }
+}
+
 
 /* BREAKPOINTS */
 /* For large devices */
