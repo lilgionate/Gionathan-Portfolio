@@ -1,5 +1,5 @@
 import "./about.css";
-import AboutImg from "../../assets/about-mepic.jpg";
+import AboutImg from "../../assets/About-me1.jpg";
 import CV from "../../assets/Gionathan-Vargas-Solutions-Engineer.pdf";
 import Info from "./Info";
 
