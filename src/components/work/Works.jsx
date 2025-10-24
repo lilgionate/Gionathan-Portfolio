@@ -163,7 +163,7 @@ const DemoModal = ({ isOpen, project, onClose, onExited }) => {
               />
             </div>
           ) : (
-            <div className="modal__empty">No video or embeddable demo provided.</div>
+            <div className="modal__empty">Coming Soon!</div>
           )}
 
           <div className="modal__actions">
