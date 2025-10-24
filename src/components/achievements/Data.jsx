@@ -15,19 +15,19 @@ export const Data = [
     id: 3,
     icon: "bx bx-plug", 
     title: "API & Integration Projects",
-    description: "Implemented working prototypes with Stripe, HubSpot, and Firebase integrations."
+    description: "Implemented fully functional prototypes integrating multiple third party APIs and SaaS platforms."
   },
   {
     id: 4,
     icon: "bx bx-code-alt", 
     title: "Hybrid Skillset",
-    description: "Combined SaaS sales expertise with hands-on software development to bridge business and technology."
+    description: "Combined SaaS sales expertise with hands on software development to bridge business and technology."
   },
   {
     id: 5,
     icon: "bx bx-line-chart", 
     title: "Business Impact",
-    description: "Helped martial arts schools streamline day-to-day operations with MAS9 software."
+    description: "Delivered scalable solutions that automated workflows and drove measurable business impact."
   },
 ];
 
