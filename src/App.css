@@ -152,10 +152,12 @@ section {
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .button:hover {
   background-color: var(--title-color-dark);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
 }
 
 .button__icon {
@@ -165,7 +167,7 @@ section {
 .button--flex {
   display: inline-flex;
   align-items: center;
-  transition: background-color 0.4s, color 0.4s;
+  transition: all 0.2s ease-in-out;
 }
 
 

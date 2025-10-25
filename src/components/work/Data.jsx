@@ -1,6 +1,6 @@
 import Work1 from "../../assets/project-1.png";
 import Work2 from "../../assets/trello-clone.png";
-import Work3 from "../../assets/project-3.png";
+import Work3 from "../../assets/real-time-dashboard.png";
 /* import Work4 from "../../assets/demo-1.png";
 import Work5 from "../../assets/demo-2.png";
 import Work6 from "../../assets/demo-3.png"; */

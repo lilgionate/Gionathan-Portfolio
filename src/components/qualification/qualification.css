@@ -8,6 +8,7 @@
   margin-bottom: var(--mb-2);
 }
 
+/* base button */
 .qualification__button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
@@ -22,10 +23,19 @@
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* hover effect */
 .qualification__button:hover {
   background-color: var(--title-color);
   color: #fff;
 }
+
+/* ✅ active tab */
+.qualification__active {
+  background-color: var(--title-color);
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
 
 .qualification__button:hover .qualification__icon {
   color: #fff;

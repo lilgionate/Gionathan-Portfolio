@@ -37,6 +37,7 @@
     background-color: var(--title-color);
     color: white;
     border-radius: 0.5rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .services__button-icon {
