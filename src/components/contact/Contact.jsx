@@ -14,11 +14,11 @@ const Contact = () => {
     const checkAvailability = () => {
       const now = new Date();
       const hour = now.getHours();
-      setIsAvailable(hour >= 9 && hour < 21); // Available between 9 AM and 9 PM
+      setIsAvailable(hour >= 9 && hour < 21);
     };
 
     checkAvailability();
-    const interval = setInterval(checkAvailability, 60000); // update every minute
+    const interval = setInterval(checkAvailability, 60000);
     return () => clearInterval(interval);
   }, []);
 
@@ -60,7 +60,6 @@ const Contact = () => {
       <span className="section__subtitle">Contact Me</span>
 
       <div className="contact__container container grid">
-        {/* LEFT: Contact options */}
         <div className="contact__content">
           <h3 className="contact__title">Talk to me</h3>
 
@@ -102,8 +101,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-
-        {/* RIGHT: Contact form */}
         <div className="contact__content">
           <h3 className="contact__title">Write me your project</h3>
 

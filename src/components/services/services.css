@@ -121,7 +121,6 @@
   font-size: var(--small-font-size);
 }
 
-/* Active Modal*/
 .active-modal {
     opacity: 1;
     visibility: visible;

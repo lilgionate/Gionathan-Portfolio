@@ -21,7 +21,6 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         <a href="#home" className="nav__logo" aria-label="Go to home">
-          {/* SVG will take currentColor so it matches --title-color */}
           <img src={Logo} alt="nathans.dev" className="nav__logo-img" />
         </a>
 

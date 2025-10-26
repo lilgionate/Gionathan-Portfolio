@@ -1,13 +1,10 @@
 import "./achievements.css";
 import { Data } from "./Data";
-// Import Swiper React components and required modules
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// import required modules
 import { Pagination, Autoplay } from "swiper/modules";
 
 const Achievements = () => {
@@ -23,8 +20,8 @@ const Achievements = () => {
         spaceBetween={24}
         speed={800}
         autoplay={{
-          delay: 4000, // 3 seconds
-          disableOnInteraction: false, // keeps autoplay running after user interaction
+          delay: 4000,
+          disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,

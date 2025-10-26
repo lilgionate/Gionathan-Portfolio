@@ -19,16 +19,29 @@ const WorksItems = ({ item, onOpenDemo }) => {
         )}
       </div>
 
-      {item.githubUrl && (
-        <a
-          href={item.githubUrl}
-          className="work__button github-button"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub <i className="bx bx-right-arrow-alt work__button-icon"></i>
-        </a>
-      )}
+      <div className="work__buttons">
+        {item.liveDemo && (
+          <a
+            href={item.liveDemo}
+            className="work__button demo-button"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Live Demo <i className="bx bx-right-arrow-alt work__button-icon"></i>
+          </a>
+        )}
+
+        {item.githubUrl && (
+          <a
+            href={item.githubUrl}
+            className="work__button github-button"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub <i className="bx bx-right-arrow-alt work__button-icon"></i>
+          </a>
+        )}
+      </div>
     </div>
   );
 };
@@ -39,6 +52,7 @@ WorksItems.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     githubUrl: PropTypes.string,
+    liveDemo: PropTypes.string,
     description: PropTypes.string,
     videoUrl: PropTypes.string,
   }).isRequired,

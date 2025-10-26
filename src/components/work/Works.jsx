@@ -31,10 +31,8 @@ const Works = () => {
     document.body.style.overflow = "hidden";
   };
 
-  // Close: only flip isOpen; let modal animate out
   const closeDemo = () => setIsOpen(false);
 
-  // Called by modal after exit transition completes
   const handleExited = () => {
     setSelected(null);
     document.body.style.overflow = "";
@@ -72,23 +70,22 @@ const Works = () => {
 
 export default Works;
 
-/* --- Inline modal component --- */
+
 const DemoModal = ({ isOpen, project, onClose, onExited }) => {
-  const [mounted, setMounted] = useState(false); // presence in DOM
-  const [show, setShow] = useState(false);       // controls .show class (animation)
+  const [mounted, setMounted] = useState(false); 
+  const [show, setShow] = useState(false);    
   const overlayRef = useRef(null);
   const modalRef = useRef(null);
 
-  // Mount/unmount logic
+
   useEffect(() => {
     if (isOpen && project) {
-      setMounted(true); // mount immediately
+      setMounted(true);
     } else {
-      setShow(false);   // start exit transition
+      setShow(false); 
     }
   }, [isOpen, project]);
 
-  // Ensure a real first paint before adding .show (double rAF)
   useEffect(() => {
     if (!mounted || !isOpen) return;
     let raf1, raf2;
@@ -101,7 +98,6 @@ const DemoModal = ({ isOpen, project, onClose, onExited }) => {
     };
   }, [mounted, isOpen]);
 
-  // After the modal finishes transitioning out, unmount + notify parent
   const handleModalTransitionEnd = (e) => {
     if (e.target !== modalRef.current) return;
     if (!show) {
@@ -110,7 +106,6 @@ const DemoModal = ({ isOpen, project, onClose, onExited }) => {
     }
   };
 
-  // ESC to close
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
@@ -167,6 +162,16 @@ const DemoModal = ({ isOpen, project, onClose, onExited }) => {
           )}
 
           <div className="modal__actions">
+            {project.liveDemo && (
+              <a
+                href={project.liveDemo}
+                target="_blank"
+                rel="noreferrer"
+                className="work__button demo-button"
+              >
+                Live Demo <i className="bx bx-right-arrow-alt work__button-icon"></i>
+              </a>
+            )}
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
@@ -174,7 +179,7 @@ const DemoModal = ({ isOpen, project, onClose, onExited }) => {
                 rel="noreferrer"
                 className="work__button github-button"
               >
-                View on GitHub
+                GitHub <i className="bx bx-right-arrow-alt work__button-icon"></i>
               </a>
             )}
           </div>
