@@ -9,7 +9,7 @@ export const projectsData = [
     title: "Business Analytics Dashboard",
     category: "Dashboards",
     githubUrl: "https://github.com/lilgionate/React-Admin-Dashboard.git",
-    liveDemo: "https://react-admin-dashboard-swart-theta.vercel.app/login",
+    liveDemo: "https://react-admin-dashboard-swart-theta.vercel.app/",
     description: "Interactive dashboard for real time business insights and tracking.",
   },
   {
