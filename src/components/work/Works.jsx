@@ -169,7 +169,7 @@ const DemoModal = ({ isOpen, project, onClose, onExited }) => {
                 rel="noreferrer"
                 className="work__button demo-button"
               >
-                Live Demo <i className="bx bx-right-arrow-alt work__button-icon"></i>
+                Live App <i className="bx bx-right-arrow-alt work__button-icon"></i>
               </a>
             )}
             {project.githubUrl && (

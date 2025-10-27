@@ -27,7 +27,7 @@ const WorksItems = ({ item, onOpenDemo }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Live Demo <i className="bx bx-right-arrow-alt work__button-icon"></i>
+            Live App <i className="bx bx-right-arrow-alt work__button-icon"></i>
           </a>
         )}
 
