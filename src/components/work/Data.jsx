@@ -11,6 +11,7 @@ export const projectsData = [
     githubUrl: "https://github.com/lilgionate/React-Admin-Dashboard.git",
     liveDemo: "https://react-admin-dashboard-swart-theta.vercel.app/",
     description: "Interactive dashboard for real time business insights and tracking.",
+    videoUrl: "https://www.loom.com/embed/fd59d06ae4694f59994ecd70c0d0bb77",
   },
   {
     id: 2,
