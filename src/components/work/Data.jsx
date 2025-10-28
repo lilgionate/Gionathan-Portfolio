@@ -20,7 +20,7 @@ export const projectsData = [
     githubUrl: "https://github.com/lilgionate/trello-clone.git",
     liveDemo: "https://trello-clone-nine-coral.vercel.app/",
     description: "Trello style Kanban board with smooth drag and drop task organization.",
-    videoUrl: "https://www.loom.com/embed/85616ba5a72a4b17961693c74f284c86",
+    videoUrl: "https://www.loom.com/embed/76dccac5c37d4d55808d61d29c7b3e1b",
   },
   {
     id: 3,
