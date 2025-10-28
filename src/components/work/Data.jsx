@@ -30,7 +30,7 @@ export const projectsData = [
     githubUrl: "https://github.com/lilgionate/stripe-subscription.git",
     liveDemo: "https://stripe-subscription-gray.vercel.app/",
     description: "Stripe subscription flow with webhooks synced to MongoDB through Prisma.",
-    videoUrl: "https://www.loom.com/embed/f0ae978fbbf543049b1b40516a3da299",
+    videoUrl: "https://www.loom.com/embed/2361514beddd45aca904103f30d33b59",
   },
 ];
 
