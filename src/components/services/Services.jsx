@@ -194,6 +194,65 @@ const Services = () => {
                         </div>
                     </div>
             </div>
+            <div className="services__content">
+                <div>
+                    <i className='uil uil-edit services__icon'></i>
+                    <h3 className="services__title">Integration <br/>& Automation</h3>
+                </div>
+
+                    <span onClick={() => toggleTab(4)} className="services__button">
+                        View More
+                        <i className="uil uil-arrow-right services__button-icon"></i>
+                        </span>
+                    
+                    <div className={toggleState === 4 ? "services__modal active-modal" : "services__modal"}>
+                        <div className="services__modal-content">
+                            <i onClick={() => toggleTab(0)} className="uil uil-times services__modal-close"></i>
+
+                            <h3 className="services__modal-title">Integration & Automation</h3>
+                            <p className="services__modal-description">
+                                Connecting systems and automating workflows to streamline operations, reduce manual effort, and improve business efficiency.
+                            </p>
+                        
+                            <ul className="services__modal-services grid">
+                                <li className="services__modal-services">
+                                    <i className="uil uil-check-circle services__modal-icon"></i>
+                                    <p className="services__modal-info">
+                                        Design and implement seamless API integrations.
+                                    </p>
+                                </li>
+
+                                <li className="services__modal-services">
+                                    <i className="uil uil-check-circle services__modal-icon"></i>
+                                    <p className="services__modal-info">
+                                        Automate workflows using triggers and webhooks.
+                                    </p>
+                                </li>
+
+                                <li className="services__modal-services">
+                                    <i className="uil uil-check-circle services__modal-icon"></i>
+                                    <p className="services__modal-info">
+                                        Synchronize data across CRMs, ERPs, & SaaS platforms.
+                                    </p>
+                                </li>
+
+                                <li className="services__modal-services">
+                                    <i className="uil uil-check-circle services__modal-icon"></i>
+                                    <p className="services__modal-info">
+                                        Workflow orchestration and system monitoring.
+                                    </p>
+                                </li>
+
+                                <li className="services__modal-services">
+                                    <i className="uil uil-check-circle services__modal-icon"></i>
+                                    <p className="services__modal-info">
+                                        Optimize and scale automation pipelines for efficiency.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
         </div>
     </section>
     

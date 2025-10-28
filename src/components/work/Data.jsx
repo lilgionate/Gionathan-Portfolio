@@ -1,8 +1,18 @@
 import Work1 from "../../assets/project-1.png";
 import Work2 from "../../assets/trello-clone.png";
 import Work3 from "../../assets/real-time-dashboard.png";
+import Work4 from "../../assets/hubspot-jira.png";
 
 export const projectsData = [
+    {
+      id: 4,
+      image: Work4,
+      title: "Sales to Project Automation Hub",
+      category: "Integrations",
+      githubUrl: "https://github.com/lilgionate/",
+      liveDemo: "https://react-admin-dashboard-swart-theta.vercel.app/",
+      description: "Automating the handoff between Sales and Operations.",
+    },
     {
     id: 1,
     image: Work3,
