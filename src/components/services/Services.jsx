@@ -232,7 +232,7 @@ const Services = () => {
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Synch data across CRMs, ERPs, & SaaS platforms.
+                                        Sync data across CRMs, ERPs, & SaaS platforms.
                                     </p>
                                 </li>
 
@@ -246,7 +246,7 @@ const Services = () => {
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Optimize & scale automation pipelines for efficiency.
+                                        Scale and optimize automation workflows.
                                     </p>
                                 </li>
                             </ul>
