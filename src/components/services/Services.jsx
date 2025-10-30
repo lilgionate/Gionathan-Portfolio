@@ -18,7 +18,7 @@ const Services = () => {
                 <div>
                     <i className='uil uil-web-grid services__icon'></i>
                     <h3 className="services__title">
-                        Demo & <br/> Presentation Design</h3>
+                        Presentation & <br/> Demo Design</h3>
                 </div>
 
                     <span className="services__button" onClick={() => toggleTab(1)}>
@@ -30,7 +30,7 @@ const Services = () => {
                         <div className="services__modal-content">
                             <i onClick={() => toggleTab(0)} className="uil uil-times services__modal-close"></i>
 
-                            <h3 className="services__modal-title">Demo & Presentation Design</h3>
+                            <h3 className="services__modal-title">Presentation & Demo Design</h3>
                             <p className="services__modal-description">
                                 Crafting tailored, engaging product demos that clearly show value and inspire client confidence.
                                 </p>
