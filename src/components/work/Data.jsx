@@ -7,7 +7,7 @@ import Work6 from "../../assets/360-command-center.png"
 
 export const projectsData = [
    {
-      id: 5,
+      id: 6,
       image: Work6,
       title: "Customer 360 Command Center",
       category: "Integrations",
