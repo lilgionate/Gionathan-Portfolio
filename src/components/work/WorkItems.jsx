@@ -18,30 +18,6 @@ const WorksItems = ({ item, onOpenDemo }) => {
           <p className="work__description">{item.description}</p>
         )}
       </div>
-
-      <div className="work__buttons">
-        {item.liveDemo && (
-          <a
-            href={item.liveDemo}
-            className="work__button demo-button"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Live App <i className="bx bx-right-arrow-alt work__button-icon"></i>
-          </a>
-        )}
-
-        {item.githubUrl && (
-          <a
-            href={item.githubUrl}
-            className="work__button github-button"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub <i className="bx bx-right-arrow-alt work__button-icon"></i>
-          </a>
-        )}
-      </div>
     </div>
   );
 };

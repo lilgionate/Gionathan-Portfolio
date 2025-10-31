@@ -2,8 +2,26 @@ import Work1 from "../../assets/project-1.png";
 import Work2 from "../../assets/trello-clone.png";
 import Work3 from "../../assets/real-time-dashboard.png";
 import Work4 from "../../assets/hubspot-jira.png";
+import Work5 from "../../assets/ticket-router.png"
+import Work6 from "../../assets/360-command-center.png"
 
 export const projectsData = [
+   {
+      id: 5,
+      image: Work6,
+      title: "Customer 360 Command Center",
+      category: "Integrations",
+      description: "All in one dashboard for complete customer insights.",
+      
+    },
+   {
+      id: 5,
+      image: Work5,
+      title: "AI Ticket Router",
+      category: "Integrations",
+      description: "AI powered system that routes customer tickets instantly to the right team.",
+      
+    },
     {
       id: 4,
       image: Work4,
@@ -26,7 +44,7 @@ export const projectsData = [
     id: 2,
     image: Work2,
     title: "Trello Style Kanban Board",
-    category: "Integrations",
+    category: "Demos",
     githubUrl: "https://github.com/lilgionate/trello-clone.git",
     liveDemo: "https://trello-clone-nine-coral.vercel.app/",
     description: "Trello style Kanban board with smooth drag and drop task organization.",
