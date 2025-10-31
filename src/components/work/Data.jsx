@@ -10,7 +10,7 @@ export const projectsData = [
       id: 6,
       image: Work6,
       title: "Customer 360 Command Center",
-      category: "Integrations",
+      category: "Dashboards",
       description: "All in one dashboard for complete customer insights.",
       
     },
