@@ -9,9 +9,8 @@ export const projectsData = [
       image: Work4,
       title: "Sales to Project Automation Hub",
       category: "Integrations",
-      githubUrl: "https://github.com/lilgionate/",
-      liveDemo: "https://react-admin-dashboard-swart-theta.vercel.app/",
       description: "Automating the handoff between Sales and Operations.",
+      videoUrl:"https://www.loom.com/embed/6c036a61f7294d7883e63b40b9e3e2ff",
     },
     {
     id: 1,
