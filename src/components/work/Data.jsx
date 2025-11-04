@@ -12,7 +12,6 @@ export const projectsData = [
       title: "Customer 360 Command Center",
       category: "Dashboards",
       description: "All in one dashboard for complete customer insights.",
-      
     },
    {
       id: 5,
@@ -20,7 +19,7 @@ export const projectsData = [
       title: "AI Ticket Router",
       category: "Integrations",
       description: "AI powered system that routes customer tickets instantly to the right team.",
-      
+      videoUrl: "https://www.loom.com/embed/6b7521419a294338b29b2fd42ff94b02",
     },
     {
       id: 4,
