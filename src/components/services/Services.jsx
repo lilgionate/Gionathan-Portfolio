@@ -46,7 +46,7 @@ const Services = () => {
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Customize demo environments for client needs.
+                                        Customize demo environments for clients.
                                     </p>
                                 </li>
 
@@ -60,14 +60,14 @@ const Services = () => {
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Use storytelling to simplify complex solutions.
+                                        Storytelling to simplify complex solutions.
                                     </p>
                                 </li>
 
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Inspire confidence and accelerate decisions.
+                                        Inspire confidence & accelerate decisions.
                                     </p>
                                 </li>
                             </ul>
@@ -159,7 +159,7 @@ const Services = () => {
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Conduct discovery and requirement analysis.
+                                        Conduct discovery and required analysis.
                                     </p>
                                 </li>
 
@@ -180,14 +180,14 @@ const Services = () => {
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Advise on adoption and change management.
+                                        Advise on adoption & change management.
                                     </p>
                                 </li>
 
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Empower teams to scale smarter and faster.
+                                        Empower teams to scale smarter & faster.
                                     </p>
                                 </li>
                             </ul>
@@ -218,14 +218,14 @@ const Services = () => {
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Design and implement seamless API integrations.
+                                        Design & implement seamless API integrations.
                                     </p>
                                 </li>
 
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Automate workflows using triggers and webhooks.
+                                        Automate workflows using triggers & webhooks.
                                     </p>
                                 </li>
 
@@ -239,14 +239,14 @@ const Services = () => {
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Workflow orchestration and system monitoring.
+                                        Workflow orchestration & system monitoring.
                                     </p>
                                 </li>
 
                                 <li className="services__modal-services">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Scale and optimize automation workflows.
+                                        Scale & optimize automation workflows.
                                     </p>
                                 </li>
                             </ul>
