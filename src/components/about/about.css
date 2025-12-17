@@ -86,6 +86,10 @@
     .about__description {
         padding: 0;
     }
+
+    .about__subtitle {
+        line-height: 1;
+    }
   }
   
   /* For small devices */

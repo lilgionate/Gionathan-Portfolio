@@ -129,16 +129,16 @@
 
 /* BREAKPOINTS */
 /* For large devices */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1292px) {
     .services__container {
-        grid-template-columns: repeat(2, 218px);
+        grid-template-columns: repeat(2, 278px);
     }
   }
   
   /* For medium devices */
 @media screen and (max-width: 768px) {
     .services__container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 218px);
     }
 
     .services__content {
@@ -151,6 +151,10 @@
   }
   
 @media screen and (max-width: 576px) {
+      .services__container {
+        grid-template-columns: repeat(1, 218px);
+    }
+
     .services__modal-content {
         padding: 4.5rem 1.5rem 2.5rem;
     }
@@ -163,7 +167,7 @@
   /* For small devices */
 @media  screen and (max-width: 350px) {
     .services__container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: max-content;
     }
 
     .services__content {
