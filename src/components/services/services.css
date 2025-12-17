@@ -163,7 +163,7 @@
   /* For small devices */
 @media  screen and (max-width: 350px) {
     .services__container {
-        grid-template-columns: max-content;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .services__content {

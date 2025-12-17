@@ -347,11 +347,7 @@
     .work__item {
         font-size: var(--small-font-size);
     }
-
-    .work__card {
-       grid-template-columns: 1fr;
-    }
-
+    
     .work__filters {
       column-gap: 0.25rem;
     }
