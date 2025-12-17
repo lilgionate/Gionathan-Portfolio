@@ -86,10 +86,6 @@
     .about__description {
         padding: 0;
     }
-
-    .about__subtitle {
-        line-height: 0.5;
-    }
   }
   
   /* For small devices */
@@ -97,5 +93,6 @@
     .about__info {
         grid-template-columns: repeat(2, 1fr);
     }
+    
   }
     

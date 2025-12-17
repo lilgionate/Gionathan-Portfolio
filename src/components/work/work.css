@@ -44,13 +44,14 @@
 
 .work__img-wrapper {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 100%;
   border-radius: 1rem;
   overflow: visible;                    
   transition: transform 300ms ease, box-shadow 300ms ease;
   will-change: transform;
   cursor: pointer;
+  
 }
 
 .work__img-wrapper::before {
@@ -329,6 +330,7 @@
     width: 90%;           
     max-width: 336.5px;      
   }
+ 
 }
 
   

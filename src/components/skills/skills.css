@@ -55,7 +55,7 @@
 /* For large devices */
 @media screen and (max-width: 992px) {
     .skills__container {
-        grid-template-columns: repeat(1, 338px);
+        grid-template-columns: repeat(1, 350px);
         row-gap: 2rem;
     }
   }
@@ -63,7 +63,7 @@
   /* For medium devices */
   @media screen and (max-width: 576px) {
     .skills__container {
-        grid-template-columns: repeat(1, 328px);
+        grid-template-columns: repeat(1, 338px);
     }
 
     .skills__content {
